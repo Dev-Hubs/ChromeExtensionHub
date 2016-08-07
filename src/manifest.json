@@ -1,0 +1,41 @@
+﻿{
+  "Author":"Mohamad Qaddura",
+  "manifest_version": 2,
+  "name": "Chrome Extension Hub",
+  "description": "Developer-To-Developer Hub as Tutorial to develop chrome extensions",
+  "version": "1.0",
+  "devtools_page": "devtools/chrome-devtools.html",
+  "permissions":[
+    "activeTab"
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png",
+    "72": "icons/72.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "browser_action":{
+    "default_icon":"icons/32.png",
+    "default_title":"I am the Pop Up"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "content/content.js" ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background/background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "inject/code.js",
+    "inject/style.css"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self",
+  "minimum_chrome_version": "25"
+}

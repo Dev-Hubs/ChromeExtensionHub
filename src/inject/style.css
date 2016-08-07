@@ -1,0 +1,9 @@
+﻿/*
+My name is Style , I will be injected into your Inspected Window.
+I Can :
+1) Apply my style to all DOM Objects just like any other style link
+*/
+
+.body{
+    background-color:/*old but*/gold;
+}
