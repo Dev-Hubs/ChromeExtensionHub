@@ -1,5 +1,4 @@
 ﻿{
-  "Author":"Mohamad Qaddura",
   "manifest_version": 2,
   "name": "Chrome Extension Hub",
   "description": "Developer-To-Developer Hub as Tutorial to develop chrome extensions",
@@ -36,6 +35,5 @@
     "inject/code.js",
     "inject/style.css"
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self",
   "minimum_chrome_version": "25"
 }
