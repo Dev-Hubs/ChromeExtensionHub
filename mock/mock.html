@@ -1,13 +1,45 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>Chrome Extension Hub - Mock Site</title>
 </head>
 
 <body>
-
-
-
-    <script src="mock.js"></script>
+    <button onclick="sendToContent()">Content</button>
+    <button onclick="sendToBackground()">Background</button>
+    <button onclick="sendToDevTool()">DevTool</button>
+    <section id="inspected_window">
+        <h1>Inspected Window Section</h1>
+        <label>Last Sent:</label>
+        <label class="out"></label>
+        <br/>
+        <label>Last Received:</label>
+        <label class="in"></label>
+    </section>
+    <section id="content_script">
+        <h1>Content Script Section</h1>
+        <label>Last Sent:</label>
+        <label class="out"></label>
+        <br/>
+        <label>Last Received:</label>
+        <label class="in"></label>
+    </section>
+    <script>
+        function sendToInspected(){
+            CRXHUB.API.sendMessage('hello from inspectedWindow','inspectedWindow','inspectedWindow')
+        }
+        function sendToContent(){
+            CRXHUB.API.sendMessage('hello from inspectedWindow','content','inspectedWindow')
+        }
+        function sendToBackground(){
+            CRXHUB.API.sendMessage('hello from inspectedWindow','background','inspectedWindow')
+        }
+        function sendToDevTool(){
+            CRXHUB.API.sendMessage('hello from inspectedWindow','devTool','inspectedWindow')
+        }
+        
+</script>
 </body>
+
 </html>

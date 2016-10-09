@@ -1,12 +1,28 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>DevTool Panel</title>
     <meta charset="utf-8" />
-    <script src="panel.js"></script>
     <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
-    I am just a panel
+    <button data-target='background'>Background</button>
+    <button data-target="content">Content</button>
+    <button data-target="inspectedWindow">Inspected Window</button>
+    <section id="devtool">
+        <h1>DEVTOOL</h1>
+        <label>Last Sent:</label>
+        <label class="out"></label>
+        <br/>
+        <label>Last Received:</label>
+        <label class="in"></label>
+    </section>
+
+
+    <script src="../global/interface.js"></script>
+    <script src="panel.js"></script>
 </body>
+
 </html>

@@ -23,15 +23,20 @@
   "content_scripts": [
     {
       "matches": [ "<all_urls>" ],
-      "js": [ "content/content.js" ]
+      "js": [ 
+        "global/interface.js", 
+        "content/content.js" 
+        ]
     }
   ],
   "background": {
     "scripts": [
+      "global/interface.js",
       "background/background.js"
     ]
   },
   "web_accessible_resources": [
+    "global/interface.js",
     "inject/code.js",
     "inject/style.css"
   ],
